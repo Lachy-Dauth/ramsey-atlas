@@ -1,0 +1,948 @@
+{
+  "checkedDate": "2026-09-26",
+  "description": "Inputs for reproducible derived bounds, not a separate catalogue of best-known endpoints. Upper seeds beyond23 are computed by the recurrence, not supplied as anchors.",
+  "twoColourTriangles": [
+    {
+      "k": 3,
+      "lower": 6,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "GG",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 6,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "GG"
+    },
+    {
+      "k": 4,
+      "lower": 9,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "GG",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 9,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "GG"
+    },
+    {
+      "k": 5,
+      "lower": 14,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "GG",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 14,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "GG"
+    },
+    {
+      "k": 6,
+      "lower": 18,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "Kery",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 18,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "Kery"
+    },
+    {
+      "k": 7,
+      "lower": 23,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "Ka2",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 23,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "GrY"
+    },
+    {
+      "k": 8,
+      "lower": 28,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "GrY",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 28,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "McZ"
+    },
+    {
+      "k": 9,
+      "lower": 36,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "Ka2",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 36,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "GR"
+    },
+    {
+      "k": 10,
+      "lower": 40,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "Ex5",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 41,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "Ang1"
+    },
+    {
+      "k": 11,
+      "lower": 47,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "Ex20",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 50,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "GoeR1"
+    },
+    {
+      "k": 12,
+      "lower": 53,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "Kol1",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 59,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "Les"
+    },
+    {
+      "k": 13,
+      "lower": 61,
+      "lowerSource": "nagda-raghavan-thakurta-2026",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "NaRT",
+      "location": "Author source",
+      "upper": 68,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "GoeR1"
+    },
+    {
+      "k": 14,
+      "lower": 67,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "Kol2",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 77,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "GoeR1"
+    },
+    {
+      "k": 15,
+      "lower": 74,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "Kol2",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 87,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "GoeR1"
+    },
+    {
+      "k": 16,
+      "lower": 82,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "Ex21",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 97,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "Back3"
+    },
+    {
+      "k": 17,
+      "lower": 93,
+      "lowerSource": "Wang-2026",
+      "lowerEvidence": "author-reported witness, not independently verified here",
+      "lowerReference": "Wang-2026-author-repository",
+      "location": "Author source",
+      "upper": 109,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "Back1"
+    },
+    {
+      "k": 18,
+      "lower": 100,
+      "lowerSource": "nagda-raghavan-thakurta-2026",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "NaRT",
+      "location": "Author source",
+      "upper": 120,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "Back4"
+    },
+    {
+      "k": 19,
+      "lower": 106,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "WWY1",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 132,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "Back3"
+    },
+    {
+      "k": 20,
+      "lower": 111,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "Ex16",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 145,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "Les"
+    },
+    {
+      "k": 21,
+      "lower": 122,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "WWY1",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 157,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "Back4"
+    },
+    {
+      "k": 22,
+      "lower": 131,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "WSLX2",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 171,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "Back2"
+    },
+    {
+      "k": 23,
+      "lower": 139,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "XWCS",
+      "location": "Tables Ia/IIa/IIb of survey revision18",
+      "upper": 185,
+      "upperSource": "survey-18",
+      "upperEvidence": "survey-listed result",
+      "upperReference": "Back2"
+    },
+    {
+      "k": 24,
+      "lower": 151,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 25,
+      "lower": 160,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 26,
+      "lower": 163,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 27,
+      "lower": 172,
+      "lowerSource": "survey-18",
+      "lowerEvidence": "survey-listed result (individual source may be unpublished)",
+      "lowerReference": "LiLi",
+      "location": "Tables Ia/IIa/IIb of survey revision18"
+    },
+    {
+      "k": 28,
+      "lower": 181,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 29,
+      "lower": 194,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 30,
+      "lower": 199,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 31,
+      "lower": 210,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 32,
+      "lower": 219,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 33,
+      "lower": 230,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 34,
+      "lower": 239,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 35,
+      "lower": 253,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 36,
+      "lower": 261,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 37,
+      "lower": 272,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 38,
+      "lower": 281,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 39,
+      "lower": 294,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 40,
+      "lower": 305,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 41,
+      "lower": 317,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 42,
+      "lower": 327,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 43,
+      "lower": 340,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 44,
+      "lower": 348,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 45,
+      "lower": 364,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 46,
+      "lower": 371,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 47,
+      "lower": 385,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 48,
+      "lower": 391,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    },
+    {
+      "k": 49,
+      "lower": 411,
+      "lowerSource": "Coniglio-et-al-2026",
+      "lowerEvidence": "preprint with graph certificate; checker claimed by authors, not independently run here",
+      "lowerReference": "Coniglio-et-al-2026-proposition12",
+      "location": "Proposition12 / Table7"
+    }
+  ],
+  "threeColourLower": [
+    {
+      "tuple": [
+        3,
+        3,
+        3
+      ],
+      "lower": 17,
+      "source": "GG",
+      "evidence": "Published",
+      "location": "Section 6.1, pp. 55–57"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        4
+      ],
+      "lower": 30,
+      "source": "survey-18",
+      "evidence": "Published dynamic survey",
+      "location": "Section 6.1, pp. 55–57"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        5
+      ],
+      "lower": 45,
+      "source": "Ex2",
+      "evidence": "Published, Congressus Numerantium 59, 31–36",
+      "location": "Section 6.1, pp. 55–57"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        6
+      ],
+      "lower": 61,
+      "source": "ExT",
+      "evidence": "Published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "location": "Section 6.1, pp. 55–57"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        7
+      ],
+      "lower": 85,
+      "source": "Ex18",
+      "evidence": "survey-listed personal communication",
+      "location": "Table XIb, p.56"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        8
+      ],
+      "lower": 103,
+      "source": "Ex18",
+      "evidence": "survey-listed personal communication",
+      "location": "Table XIb, p.56"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        9
+      ],
+      "lower": 129,
+      "source": "Ex18",
+      "evidence": "survey-listed personal communication",
+      "location": "Table XIb, p.56"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        10
+      ],
+      "lower": 150,
+      "source": "ExT",
+      "evidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "location": "Table XIb, p.56"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        11
+      ],
+      "lower": 174,
+      "source": "ExT",
+      "evidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "location": "Table XIb, p.56"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        12
+      ],
+      "lower": 194,
+      "source": "ExT",
+      "evidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "location": "Table XIb, p.56"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        13
+      ],
+      "lower": 217,
+      "source": "ExT",
+      "evidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "location": "Table XIb, p.56"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        14
+      ],
+      "lower": 242,
+      "source": "ExT",
+      "evidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "location": "Table XIb, p.56"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        15
+      ],
+      "lower": 269,
+      "source": "ExT",
+      "evidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "location": "Table XIb, p.56"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        16
+      ],
+      "lower": 291,
+      "source": "ExT",
+      "evidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "location": "Table XIb, p.56"
+    },
+    {
+      "tuple": [
+        3,
+        4,
+        4
+      ],
+      "lower": 55,
+      "source": "KrLR",
+      "evidence": "Published, Journal of Combinatorial Mathematics and Combinatorial Computing 4, 87–95",
+      "location": "Section 6.1, pp. 55–57"
+    },
+    {
+      "tuple": [
+        3,
+        4,
+        5
+      ],
+      "lower": 89,
+      "source": "Ex17",
+      "evidence": "Personal communication; constructions listed by DS1",
+      "location": "Section 6.1, pp. 55–57"
+    },
+    {
+      "tuple": [
+        3,
+        4,
+        6
+      ],
+      "lower": 117,
+      "source": "Ex17",
+      "evidence": "Personal communication reported in the published survey",
+      "location": "Table XIb, p.56",
+      "note": ""
+    },
+    {
+      "tuple": [
+        3,
+        4,
+        7
+      ],
+      "lower": 152,
+      "source": "ExT",
+      "evidence": "Published construction, listed in the published survey",
+      "location": "Table XIb, p.56",
+      "note": ""
+    },
+    {
+      "tuple": [
+        3,
+        4,
+        8
+      ],
+      "lower": 193,
+      "source": "survey-18",
+      "evidence": "Published construction inequality, tabulated in the survey",
+      "location": "Table XIb, p.56",
+      "note": "The listed bound follows from 6.2(g): 4R(4,7)−3 ≥ 193."
+    },
+    {
+      "tuple": [
+        3,
+        4,
+        9
+      ],
+      "lower": 242,
+      "source": "ExT",
+      "evidence": "Published construction, listed in the published survey",
+      "location": "Table XIb, p.56",
+      "note": ""
+    },
+    {
+      "tuple": [
+        3,
+        5,
+        5
+      ],
+      "lower": 139,
+      "source": "Ex17",
+      "evidence": "Personal communication reported in the published survey",
+      "location": "Table XIb, p.56",
+      "note": ""
+    },
+    {
+      "tuple": [
+        3,
+        5,
+        6
+      ],
+      "lower": 181,
+      "source": "Ex17",
+      "evidence": "Personal communication reported in the published survey",
+      "location": "Table XIb, p.56",
+      "note": ""
+    },
+    {
+      "tuple": [
+        3,
+        5,
+        7
+      ],
+      "lower": 241,
+      "source": "survey-18",
+      "evidence": "Published construction inequality, tabulated in the survey",
+      "location": "Table XIb, p.56",
+      "note": "The listed bound follows from the third inequality in 6.2(g): R(7,5,3) ≥ 4R(6,3,3)−3 ≥ 241."
+    },
+    {
+      "tuple": [
+        3,
+        6,
+        6
+      ],
+      "lower": 338,
+      "source": "Row5",
+      "evidence": "Preprint construction, incorporated in the published survey",
+      "location": "Section 6.1(f), p.57",
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint)."
+    },
+    {
+      "tuple": [
+        3,
+        7,
+        7
+      ],
+      "lower": 674,
+      "source": "Row5",
+      "evidence": "Preprint construction, incorporated in the published survey",
+      "location": "Section 6.1(f), p.57",
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint)."
+    },
+    {
+      "tuple": [
+        3,
+        8,
+        8
+      ],
+      "lower": 941,
+      "source": "Row5",
+      "evidence": "Preprint construction, incorporated in the published survey",
+      "location": "Section 6.1(f), p.57",
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint)."
+    },
+    {
+      "tuple": [
+        3,
+        9,
+        9
+      ],
+      "lower": 1844,
+      "source": "Row5",
+      "evidence": "Preprint construction, incorporated in the published survey",
+      "location": "Section 6.1(f), p.57",
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint)."
+    },
+    {
+      "tuple": [
+        3,
+        10,
+        10
+      ],
+      "lower": 2841,
+      "source": "survey-18",
+      "evidence": "Preprint construction, incorporated in the published survey",
+      "location": "Section 6.1(f), p.57",
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint)."
+    },
+    {
+      "tuple": [
+        4,
+        4,
+        4
+      ],
+      "lower": 128,
+      "source": "HiIr",
+      "evidence": "Published, European Journal of Combinatorics 3, 35–50",
+      "location": "Section 6.1, pp. 55–57"
+    },
+    {
+      "tuple": [
+        5,
+        5,
+        5
+      ],
+      "lower": 454,
+      "source": "Ex23",
+      "evidence": "Personal communication reported in the published survey",
+      "location": "Table XIa, p.55",
+      "note": ""
+    },
+    {
+      "tuple": [
+        6,
+        6,
+        6
+      ],
+      "lower": 1106,
+      "source": "Row3",
+      "evidence": "Published construction, listed in the published survey",
+      "location": "Table XIa, p.55",
+      "note": ""
+    },
+    {
+      "tuple": [
+        7,
+        7,
+        7
+      ],
+      "lower": 3214,
+      "source": "XuR1",
+      "evidence": "Published construction, listed in the published survey",
+      "location": "Table XIa, p.55",
+      "note": ""
+    },
+    {
+      "tuple": [
+        8,
+        8,
+        8
+      ],
+      "lower": 7174,
+      "source": "Row5",
+      "evidence": "Preprint construction, incorporated in the published survey",
+      "location": "Table XIa, p.55",
+      "note": ""
+    },
+    {
+      "tuple": [
+        8,
+        8,
+        9
+      ],
+      "lower": 10769,
+      "source": "Row5",
+      "evidence": "Preprint construction, incorporated in the published survey",
+      "location": "Section 6.1(f), p.57",
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint)."
+    },
+    {
+      "tuple": [
+        9,
+        9,
+        9
+      ],
+      "lower": 15041,
+      "source": "Row5",
+      "evidence": "Preprint construction, incorporated in the published survey",
+      "location": "Table XIa, p.55",
+      "note": ""
+    },
+    {
+      "tuple": [
+        10,
+        10,
+        10
+      ],
+      "lower": 23094,
+      "source": "Row5",
+      "evidence": "Preprint construction, incorporated in the published survey",
+      "location": "Table XIa, p.55",
+      "note": ""
+    }
+  ],
+  "upperAnchors": [
+    {
+      "tuple": [
+        3,
+        3,
+        3
+      ],
+      "upper": 17,
+      "source": "GG"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        4
+      ],
+      "upper": 30,
+      "source": "CodFIM"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        5
+      ],
+      "upper": 57,
+      "source": "survey-18"
+    },
+    {
+      "tuple": [
+        3,
+        3,
+        6
+      ],
+      "upper": 91,
+      "source": "Boza9"
+    },
+    {
+      "tuple": [
+        3,
+        4,
+        4
+      ],
+      "upper": 77,
+      "source": "survey-18"
+    },
+    {
+      "tuple": [
+        3,
+        4,
+        5
+      ],
+      "upper": 157,
+      "source": "Boza9"
+    },
+    {
+      "tuple": [
+        4,
+        4,
+        4
+      ],
+      "upper": 229,
+      "source": "Boza9"
+    }
+  ]
+}

@@ -3,13 +3,14 @@
   "title": "Ramsey Atlas",
   "checkedDate": "2026-09-26",
   "surveyDate": "2026-04-24",
-  "scope": "Curated classical clique Ramsey numbers: all 3 <= s <= t <= 10, R(3,t) through t=15, and selected multicolour cases with 3–9 colours.",
+  "scope": "Classical clique Ramsey numbers: 2-colour arguments through10 plus R(3,k) through15; R(3,3,k) through50; selected mixed 3-colour cases and 3-colour diagonals through10; selected 4–9-colour cases. Reported and derived endpoints are distinguished.",
   "intervalConvention": "Inclusive integer endpoints: lower <= R <= upper. A lower-bound witness has lower - 1 vertices.",
   "methodology": [
-    "The baseline is Small Ramsey Numbers revision 18 (24 April 2026). Literature searches through 26 September 2026 found no later improvement for the included finite cases. This is not an exhaustive or continuously updated database.",
+    "The baseline is Small Ramsey Numbers revision18 (24 April2026), supplemented by primary sources checked through26 September2026. This is a curated snapshot, not an exhaustive or continuously updated database.",
     "Two-colour upper bounds use Table Ib where it improves Table Ia. Many are unpublished computations reported in the published survey; status is shown per endpoint.",
     "Preprints and survey-listed personal communications are retained with explicit evidence labels. Bounds are not all backed by separately peer-reviewed proof articles.",
-    "Bounds for arbitrary parameters are not inferred or presented as best known. Hypergraph, directed, size, induced, and non-clique Ramsey variants are outside scope."
+    "Extended three-colour entries include derived endpoints, explicitly labelled and reproducible from three-colour-seeds.json and scripts/derive-three-colour.mjs. They are valid consequences of the cited inputs, not assertions of the strongest known numerical bounds. Hypergraph, directed, size, induced, and non-clique Ramsey variants are outside scope.",
+    "Extended lower bounds incorporate an August2026 preprint and a May2026 author-reported witness. This site has not independently checked those witness graphs. For R(3,3,k), surveyed direct bounds are compared with the constructive inequality4R(3,k−1)−3 and a complete-join construction."
   ],
   "sources": {
     "survey-18": {
@@ -112,10 +113,10 @@
     },
     "XXER": {
       "title": "Constructive Lower Bounds on Classical Multicolor Ramsey Numbers",
-      "authors": "Xiaodong Xu, Zheng Xie, Geoffrey Exoo and Stanisław Radziszowski",
+      "authors": "Xu Xiaodong; Xie Zheng; Geoffrey Exoo; Stanislaw Radziszowski",
       "date": "2004",
-      "status": "published, Electronic Journal of Combinatorics 11(1), R35",
-      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=58"
+      "status": "published",
+      "url": "https://doi.org/10.37236/1788"
     },
     "Ex10": {
       "title": "A Lower Bound for Schur Numbers and Multicolor Ramsey Numbers of K3",
@@ -143,7 +144,7 @@
       "authors": "Fred Rowley",
       "date": "2021",
       "status": "published, Australasian Journal of Combinatorics 81(2), 245–256",
-      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=46"
+      "url": "https://ajc.maths.uq.edu.au/pdf/81/ajc_v81_p245.pdf"
     },
     "Row4": {
       "title": "An Improved Lower Bound for S(7) and Some Interesting Templates",
@@ -158,6 +159,55 @@
       "date": "2022",
       "status": "preprint in survey revision 18",
       "url": "https://arxiv.org/abs/2112.03175"
+    },
+    "Row5": {
+      "title": "Improved Lower Bounds for Multicolour Ramsey Numbers using SAT-Solvers",
+      "authors": "Fred Rowley",
+      "date": "2022-09-18",
+      "status": "preprint, incorporated in survey revision 18",
+      "url": "https://arxiv.org/abs/2203.13476v3"
+    },
+    "Ex23": {
+      "title": "Ramsey constructions",
+      "authors": "Geoffrey Exoo",
+      "date": "2017–2019",
+      "status": "personal communication; constructions listed by DS1",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ejcram18.pdf#page=104"
+    },
+    "XuR1": {
+      "title": "An Improvement to Mathon’s Cyclotomic Ramsey Colorings",
+      "authors": "Xiaodong Xu and Stanisław P. Radziszowski",
+      "date": "2009",
+      "status": "published, Electronic Journal of Combinatorics 16(1), N1",
+      "url": "https://cs.rit.edu/~spr/PUBL/paper57.pdf"
+    },
+    "Ex18": {
+      "title": "Exoo, personal communication (2012-2013)",
+      "authors": "Geoffrey Exoo",
+      "date": "2012–2013",
+      "status": "survey-listed personal communication",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=17"
+    },
+    "Coniglio-et-al-2026": {
+      "title": "An Integer Programming Approach to Compute Lower Bounds for Ramsey Numbers Using Circulant Graphs",
+      "authors": "Stefano Coniglio; Fabio Furini; Ivana Ljubic; Pablo San Segundo; Johannes Thuerauf; Emiliano Traversi",
+      "date": "2026-08-19",
+      "status": "preprint",
+      "url": "https://arxiv.org/abs/2608.18769"
+    },
+    "Wang-2026": {
+      "title": "ScaleAutoResearch-Ramsey",
+      "authors": "Yiping Wang",
+      "date": "2026-05",
+      "status": "author-reported witness in public repository, not independently checked here",
+      "url": "https://github.com/ypwang61/ScaleAutoResearch-Ramsey"
+    },
+    "join-construction": {
+      "title": "Complete join in colour three: construction and derivation",
+      "authors": "Ramsey Atlas",
+      "date": "2026-09-26",
+      "status": "elementary construction explained in the repository",
+      "url": "https://github.com/Lachy-Dauth/ramsey-atlas#derived-three-colour-bounds"
     }
   },
   "records": [
@@ -1031,6 +1081,2899 @@
       "checkedDate": "2026-09-26"
     },
     {
+      "id": "r-3-3-7",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        7
+      ],
+      "lower": 85,
+      "upper": 136,
+      "lowerSource": "Ex18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "survey-listed personal communication",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              7
+            ],
+            "bound": 23
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              7
+            ],
+            "bound": 23
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              6
+            ],
+            "bound": 91
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 7) ≤ 23; R(2, 3, 7) ≤ 23; R(3, 3, 6) ≤ 91, gives 23 + 23 + 91 − 1 = 136. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-8",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        8
+      ],
+      "lower": 103,
+      "upper": 191,
+      "lowerSource": "Ex18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "survey-listed personal communication",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              8
+            ],
+            "bound": 28
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              8
+            ],
+            "bound": 28
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              7
+            ],
+            "bound": 136
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 8) ≤ 28; R(2, 3, 8) ≤ 28; R(3, 3, 7) ≤ 136, gives 28 + 28 + 136 − 1 = 191. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-9",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        9
+      ],
+      "lower": 129,
+      "upper": 261,
+      "lowerSource": "Ex18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "survey-listed personal communication",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              9
+            ],
+            "bound": 36
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              9
+            ],
+            "bound": 36
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              8
+            ],
+            "bound": 191
+          }
+        ],
+        "parity": true,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 9) ≤ 36; R(2, 3, 9) ≤ 36; R(3, 3, 8) ≤ 191, gives 36 + 36 + 191 − 1 − 1 (parity) = 261. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-10",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        10
+      ],
+      "lower": 150,
+      "upper": 342,
+      "lowerSource": "ExT",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              10
+            ],
+            "bound": 41
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              10
+            ],
+            "bound": 41
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              9
+            ],
+            "bound": 261
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 10) ≤ 41; R(2, 3, 10) ≤ 41; R(3, 3, 9) ≤ 261, gives 41 + 41 + 261 − 1 = 342. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-11",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        11
+      ],
+      "lower": 174,
+      "upper": 441,
+      "lowerSource": "ExT",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              11
+            ],
+            "bound": 50
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              11
+            ],
+            "bound": 50
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              10
+            ],
+            "bound": 342
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 11) ≤ 50; R(2, 3, 11) ≤ 50; R(3, 3, 10) ≤ 342, gives 50 + 50 + 342 − 1 = 441. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-12",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        12
+      ],
+      "lower": 194,
+      "upper": 558,
+      "lowerSource": "ExT",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              12
+            ],
+            "bound": 59
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              12
+            ],
+            "bound": 59
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              11
+            ],
+            "bound": 441
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 12) ≤ 59; R(2, 3, 12) ≤ 59; R(3, 3, 11) ≤ 441, gives 59 + 59 + 441 − 1 = 558. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-13",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        13
+      ],
+      "lower": 217,
+      "upper": 693,
+      "lowerSource": "ExT",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              13
+            ],
+            "bound": 68
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              13
+            ],
+            "bound": 68
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              12
+            ],
+            "bound": 558
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 13) ≤ 68; R(2, 3, 13) ≤ 68; R(3, 3, 12) ≤ 558, gives 68 + 68 + 558 − 1 = 693. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-14",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        14
+      ],
+      "lower": 242,
+      "upper": 846,
+      "lowerSource": "ExT",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              14
+            ],
+            "bound": 77
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              14
+            ],
+            "bound": 77
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              13
+            ],
+            "bound": 693
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 14) ≤ 77; R(2, 3, 14) ≤ 77; R(3, 3, 13) ≤ 693, gives 77 + 77 + 693 − 1 = 846. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-15",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        15
+      ],
+      "lower": 269,
+      "upper": 1019,
+      "lowerSource": "ExT",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              15
+            ],
+            "bound": 87
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              15
+            ],
+            "bound": 87
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              14
+            ],
+            "bound": 846
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 15) ≤ 87; R(2, 3, 15) ≤ 87; R(3, 3, 14) ≤ 846, gives 87 + 87 + 846 − 1 = 1,019. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-16",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        16
+      ],
+      "lower": 293,
+      "upper": 1212,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using survey-listed result (individual source may be unpublished)",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "The survey explicitly lists the lower bound 291; the displayed construction yields 293.",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              15
+            ],
+            "bound": 74,
+            "source": "survey-18"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 16) ≥ 4R(3, 15) − 3 ≥ 4 × 74 − 3 = 293. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              16
+            ],
+            "bound": 97
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              16
+            ],
+            "bound": 97
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              15
+            ],
+            "bound": 1019
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 16) ≤ 97; R(2, 3, 16) ≤ 97; R(3, 3, 15) ≤ 1,019, gives 97 + 97 + 1,019 − 1 = 1,212. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-17",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        17
+      ],
+      "lower": 325,
+      "upper": 1429,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using survey-listed result (individual source may be unpublished)",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              16
+            ],
+            "bound": 82,
+            "source": "survey-18"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 17) ≥ 4R(3, 16) − 3 ≥ 4 × 82 − 3 = 325. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              17
+            ],
+            "bound": 109
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              17
+            ],
+            "bound": 109
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              16
+            ],
+            "bound": 1212
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 17) ≤ 109; R(2, 3, 17) ≤ 109; R(3, 3, 16) ≤ 1,212, gives 109 + 109 + 1,212 − 1 = 1,429. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-18",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        18
+      ],
+      "lower": 369,
+      "upper": 1667,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using author-reported witness, not independently verified here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Wang-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              17
+            ],
+            "bound": 93,
+            "source": "Wang-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 18) ≥ 4R(3, 17) − 3 ≥ 4 × 93 − 3 = 369. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              18
+            ],
+            "bound": 120
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              18
+            ],
+            "bound": 120
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              17
+            ],
+            "bound": 1429
+          }
+        ],
+        "parity": true,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 18) ≤ 120; R(2, 3, 18) ≤ 120; R(3, 3, 17) ≤ 1,429, gives 120 + 120 + 1,429 − 1 − 1 (parity) = 1,667. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-19",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        19
+      ],
+      "lower": 397,
+      "upper": 1929,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using survey-listed result (individual source may be unpublished)",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "nagda-raghavan-thakurta-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              18
+            ],
+            "bound": 100,
+            "source": "nagda-raghavan-thakurta-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 19) ≥ 4R(3, 18) − 3 ≥ 4 × 100 − 3 = 397. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              19
+            ],
+            "bound": 132
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              19
+            ],
+            "bound": 132
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              18
+            ],
+            "bound": 1667
+          }
+        ],
+        "parity": true,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 19) ≤ 132; R(2, 3, 19) ≤ 132; R(3, 3, 18) ≤ 1,667, gives 132 + 132 + 1,667 − 1 − 1 (parity) = 1,929. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-20",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        20
+      ],
+      "lower": 421,
+      "upper": 2218,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using survey-listed result (individual source may be unpublished)",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              19
+            ],
+            "bound": 106,
+            "source": "survey-18"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 20) ≥ 4R(3, 19) − 3 ≥ 4 × 106 − 3 = 421. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              20
+            ],
+            "bound": 145
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              20
+            ],
+            "bound": 145
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              19
+            ],
+            "bound": 1929
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 20) ≤ 145; R(2, 3, 20) ≤ 145; R(3, 3, 19) ≤ 1,929, gives 145 + 145 + 1,929 − 1 = 2,218. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-21",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        21
+      ],
+      "lower": 441,
+      "upper": 2531,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using survey-listed result (individual source may be unpublished)",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              20
+            ],
+            "bound": 111,
+            "source": "survey-18"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 21) ≥ 4R(3, 20) − 3 ≥ 4 × 111 − 3 = 441. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              21
+            ],
+            "bound": 157
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              21
+            ],
+            "bound": 157
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              20
+            ],
+            "bound": 2218
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 21) ≤ 157; R(2, 3, 21) ≤ 157; R(3, 3, 20) ≤ 2,218, gives 157 + 157 + 2,218 − 1 = 2,531. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-22",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        22
+      ],
+      "lower": 485,
+      "upper": 2872,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using survey-listed result (individual source may be unpublished)",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              21
+            ],
+            "bound": 122,
+            "source": "survey-18"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 22) ≥ 4R(3, 21) − 3 ≥ 4 × 122 − 3 = 485. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              22
+            ],
+            "bound": 171
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              22
+            ],
+            "bound": 171
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              21
+            ],
+            "bound": 2531
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 22) ≤ 171; R(2, 3, 22) ≤ 171; R(3, 3, 21) ≤ 2,531, gives 171 + 171 + 2,531 − 1 = 2,872. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-23",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        23
+      ],
+      "lower": 521,
+      "upper": 3241,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using survey-listed result (individual source may be unpublished)",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              22
+            ],
+            "bound": 131,
+            "source": "survey-18"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 23) ≥ 4R(3, 22) − 3 ≥ 4 × 131 − 3 = 521. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              23
+            ],
+            "bound": 185
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              23
+            ],
+            "bound": 185
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              22
+            ],
+            "bound": 2872
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 23) ≤ 185; R(2, 3, 23) ≤ 185; R(3, 3, 22) ≤ 2,872, gives 185 + 185 + 2,872 − 1 = 3,241. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-24",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        24
+      ],
+      "lower": 553,
+      "upper": 3658,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using survey-listed result (individual source may be unpublished)",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              23
+            ],
+            "bound": 139,
+            "source": "survey-18"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 24) ≥ 4R(3, 23) − 3 ≥ 4 × 139 − 3 = 553. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              24
+            ],
+            "bound": 209
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              24
+            ],
+            "bound": 209
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              23
+            ],
+            "bound": 3241
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 24) ≤ 209; R(2, 3, 24) ≤ 209; R(3, 3, 23) ≤ 3,241, gives 209 + 209 + 3,241 − 1 = 3,658. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-25",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        25
+      ],
+      "lower": 601,
+      "upper": 4125,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              24
+            ],
+            "bound": 151,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 25) ≥ 4R(3, 24) − 3 ≥ 4 × 151 − 3 = 601. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              25
+            ],
+            "bound": 234
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              25
+            ],
+            "bound": 234
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              24
+            ],
+            "bound": 3658
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 25) ≤ 234; R(2, 3, 25) ≤ 234; R(3, 3, 24) ≤ 3,658, gives 234 + 234 + 3,658 − 1 = 4,125. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-26",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        26
+      ],
+      "lower": 637,
+      "upper": 4642,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              25
+            ],
+            "bound": 160,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 26) ≥ 4R(3, 25) − 3 ≥ 4 × 160 − 3 = 637. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              26
+            ],
+            "bound": 259
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              26
+            ],
+            "bound": 259
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              25
+            ],
+            "bound": 4125
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 26) ≤ 259; R(2, 3, 26) ≤ 259; R(3, 3, 25) ≤ 4,125, gives 259 + 259 + 4,125 − 1 = 4,642. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-27",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        27
+      ],
+      "lower": 649,
+      "upper": 5213,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              26
+            ],
+            "bound": 163,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 27) ≥ 4R(3, 26) − 3 ≥ 4 × 163 − 3 = 649. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              27
+            ],
+            "bound": 286
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              27
+            ],
+            "bound": 286
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              26
+            ],
+            "bound": 4642
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 27) ≤ 286; R(2, 3, 27) ≤ 286; R(3, 3, 26) ≤ 4,642, gives 286 + 286 + 4,642 − 1 = 5,213. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-28",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        28
+      ],
+      "lower": 685,
+      "upper": 5838,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using survey-listed result (individual source may be unpublished)",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              27
+            ],
+            "bound": 172,
+            "source": "survey-18"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 28) ≥ 4R(3, 27) − 3 ≥ 4 × 172 − 3 = 685. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              28
+            ],
+            "bound": 313
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              28
+            ],
+            "bound": 313
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              27
+            ],
+            "bound": 5213
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 28) ≤ 313; R(2, 3, 28) ≤ 313; R(3, 3, 27) ≤ 5,213, gives 313 + 313 + 5,213 − 1 = 5,838. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-29",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        29
+      ],
+      "lower": 721,
+      "upper": 6521,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              28
+            ],
+            "bound": 181,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 29) ≥ 4R(3, 28) − 3 ≥ 4 × 181 − 3 = 721. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              29
+            ],
+            "bound": 342
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              29
+            ],
+            "bound": 342
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              28
+            ],
+            "bound": 5838
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 29) ≤ 342; R(2, 3, 29) ≤ 342; R(3, 3, 28) ≤ 5,838, gives 342 + 342 + 5,838 − 1 = 6,521. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-30",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        30
+      ],
+      "lower": 773,
+      "upper": 7262,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              29
+            ],
+            "bound": 194,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 30) ≥ 4R(3, 29) − 3 ≥ 4 × 194 − 3 = 773. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              30
+            ],
+            "bound": 371
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              30
+            ],
+            "bound": 371
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              29
+            ],
+            "bound": 6521
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 30) ≤ 371; R(2, 3, 30) ≤ 371; R(3, 3, 29) ≤ 6,521, gives 371 + 371 + 6,521 − 1 = 7,262. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-31",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        31
+      ],
+      "lower": 793,
+      "upper": 8065,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              30
+            ],
+            "bound": 199,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 31) ≥ 4R(3, 30) − 3 ≥ 4 × 199 − 3 = 793. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              31
+            ],
+            "bound": 402
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              31
+            ],
+            "bound": 402
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              30
+            ],
+            "bound": 7262
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 31) ≤ 402; R(2, 3, 31) ≤ 402; R(3, 3, 30) ≤ 7,262, gives 402 + 402 + 7,262 − 1 = 8,065. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-32",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        32
+      ],
+      "lower": 837,
+      "upper": 8930,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              31
+            ],
+            "bound": 210,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 32) ≥ 4R(3, 31) − 3 ≥ 4 × 210 − 3 = 837. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              32
+            ],
+            "bound": 433
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              32
+            ],
+            "bound": 433
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              31
+            ],
+            "bound": 8065
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 32) ≤ 433; R(2, 3, 32) ≤ 433; R(3, 3, 31) ≤ 8,065, gives 433 + 433 + 8,065 − 1 = 8,930. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-33",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        33
+      ],
+      "lower": 873,
+      "upper": 9861,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              32
+            ],
+            "bound": 219,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 33) ≥ 4R(3, 32) − 3 ≥ 4 × 219 − 3 = 873. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              33
+            ],
+            "bound": 466
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              33
+            ],
+            "bound": 466
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              32
+            ],
+            "bound": 8930
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 33) ≤ 466; R(2, 3, 33) ≤ 466; R(3, 3, 32) ≤ 8,930, gives 466 + 466 + 8,930 − 1 = 9,861. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-34",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        34
+      ],
+      "lower": 917,
+      "upper": 10858,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              33
+            ],
+            "bound": 230,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 34) ≥ 4R(3, 33) − 3 ≥ 4 × 230 − 3 = 917. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              34
+            ],
+            "bound": 499
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              34
+            ],
+            "bound": 499
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              33
+            ],
+            "bound": 9861
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 34) ≤ 499; R(2, 3, 34) ≤ 499; R(3, 3, 33) ≤ 9,861, gives 499 + 499 + 9,861 − 1 = 10,858. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-35",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        35
+      ],
+      "lower": 953,
+      "upper": 11925,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              34
+            ],
+            "bound": 239,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 35) ≥ 4R(3, 34) − 3 ≥ 4 × 239 − 3 = 953. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              35
+            ],
+            "bound": 534
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              35
+            ],
+            "bound": 534
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              34
+            ],
+            "bound": 10858
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 35) ≤ 534; R(2, 3, 35) ≤ 534; R(3, 3, 34) ≤ 10,858, gives 534 + 534 + 10,858 − 1 = 11,925. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-36",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        36
+      ],
+      "lower": 1009,
+      "upper": 13062,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              35
+            ],
+            "bound": 253,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 36) ≥ 4R(3, 35) − 3 ≥ 4 × 253 − 3 = 1,009. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              36
+            ],
+            "bound": 569
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              36
+            ],
+            "bound": 569
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              35
+            ],
+            "bound": 11925
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 36) ≤ 569; R(2, 3, 36) ≤ 569; R(3, 3, 35) ≤ 11,925, gives 569 + 569 + 11,925 − 1 = 13,062. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-37",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        37
+      ],
+      "lower": 1041,
+      "upper": 14273,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              36
+            ],
+            "bound": 261,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 37) ≥ 4R(3, 36) − 3 ≥ 4 × 261 − 3 = 1,041. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              37
+            ],
+            "bound": 606
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              37
+            ],
+            "bound": 606
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              36
+            ],
+            "bound": 13062
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 37) ≤ 606; R(2, 3, 37) ≤ 606; R(3, 3, 36) ≤ 13,062, gives 606 + 606 + 13,062 − 1 = 14,273. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-38",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        38
+      ],
+      "lower": 1085,
+      "upper": 15558,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              37
+            ],
+            "bound": 272,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 38) ≥ 4R(3, 37) − 3 ≥ 4 × 272 − 3 = 1,085. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              38
+            ],
+            "bound": 643
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              38
+            ],
+            "bound": 643
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              37
+            ],
+            "bound": 14273
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 38) ≤ 643; R(2, 3, 38) ≤ 643; R(3, 3, 37) ≤ 14,273, gives 643 + 643 + 14,273 − 1 = 15,558. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-39",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        39
+      ],
+      "lower": 1121,
+      "upper": 16921,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              38
+            ],
+            "bound": 281,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 39) ≥ 4R(3, 38) − 3 ≥ 4 × 281 − 3 = 1,121. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              39
+            ],
+            "bound": 682
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              39
+            ],
+            "bound": 682
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              38
+            ],
+            "bound": 15558
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 39) ≤ 682; R(2, 3, 39) ≤ 682; R(3, 3, 38) ≤ 15,558, gives 682 + 682 + 15,558 − 1 = 16,921. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-40",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        40
+      ],
+      "lower": 1173,
+      "upper": 18362,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              39
+            ],
+            "bound": 294,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 40) ≥ 4R(3, 39) − 3 ≥ 4 × 294 − 3 = 1,173. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              40
+            ],
+            "bound": 721
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              40
+            ],
+            "bound": 721
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              39
+            ],
+            "bound": 16921
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 40) ≤ 721; R(2, 3, 40) ≤ 721; R(3, 3, 39) ≤ 16,921, gives 721 + 721 + 16,921 − 1 = 18,362. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-41",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        41
+      ],
+      "lower": 1217,
+      "upper": 19885,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              40
+            ],
+            "bound": 305,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 41) ≥ 4R(3, 40) − 3 ≥ 4 × 305 − 3 = 1,217. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              41
+            ],
+            "bound": 762
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              41
+            ],
+            "bound": 762
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              40
+            ],
+            "bound": 18362
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 41) ≤ 762; R(2, 3, 41) ≤ 762; R(3, 3, 40) ≤ 18,362, gives 762 + 762 + 18,362 − 1 = 19,885. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-42",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        42
+      ],
+      "lower": 1265,
+      "upper": 21490,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              41
+            ],
+            "bound": 317,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 42) ≥ 4R(3, 41) − 3 ≥ 4 × 317 − 3 = 1,265. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              42
+            ],
+            "bound": 803
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              42
+            ],
+            "bound": 803
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              41
+            ],
+            "bound": 19885
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 42) ≤ 803; R(2, 3, 42) ≤ 803; R(3, 3, 41) ≤ 19,885, gives 803 + 803 + 19,885 − 1 = 21,490. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-43",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        43
+      ],
+      "lower": 1305,
+      "upper": 23181,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              42
+            ],
+            "bound": 327,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 43) ≥ 4R(3, 42) − 3 ≥ 4 × 327 − 3 = 1,305. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              43
+            ],
+            "bound": 846
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              43
+            ],
+            "bound": 846
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              42
+            ],
+            "bound": 21490
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 43) ≤ 846; R(2, 3, 43) ≤ 846; R(3, 3, 42) ≤ 21,490, gives 846 + 846 + 21,490 − 1 = 23,181. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-44",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        44
+      ],
+      "lower": 1357,
+      "upper": 24958,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              43
+            ],
+            "bound": 340,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 44) ≥ 4R(3, 43) − 3 ≥ 4 × 340 − 3 = 1,357. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              44
+            ],
+            "bound": 889
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              44
+            ],
+            "bound": 889
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              43
+            ],
+            "bound": 23181
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 44) ≤ 889; R(2, 3, 44) ≤ 889; R(3, 3, 43) ≤ 23,181, gives 889 + 889 + 23,181 − 1 = 24,958. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-45",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        45
+      ],
+      "lower": 1389,
+      "upper": 26825,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              44
+            ],
+            "bound": 348,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 45) ≥ 4R(3, 44) − 3 ≥ 4 × 348 − 3 = 1,389. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              45
+            ],
+            "bound": 934
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              45
+            ],
+            "bound": 934
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              44
+            ],
+            "bound": 24958
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 45) ≤ 934; R(2, 3, 45) ≤ 934; R(3, 3, 44) ≤ 24,958, gives 934 + 934 + 24,958 − 1 = 26,825. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-46",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        46
+      ],
+      "lower": 1453,
+      "upper": 28782,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              45
+            ],
+            "bound": 364,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 46) ≥ 4R(3, 45) − 3 ≥ 4 × 364 − 3 = 1,453. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              46
+            ],
+            "bound": 979
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              46
+            ],
+            "bound": 979
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              45
+            ],
+            "bound": 26825
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 46) ≤ 979; R(2, 3, 46) ≤ 979; R(3, 3, 45) ≤ 26,825, gives 979 + 979 + 26,825 − 1 = 28,782. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-47",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        47
+      ],
+      "lower": 1481,
+      "upper": 30833,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              46
+            ],
+            "bound": 371,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 47) ≥ 4R(3, 46) − 3 ≥ 4 × 371 − 3 = 1,481. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              47
+            ],
+            "bound": 1026
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              47
+            ],
+            "bound": 1026
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              46
+            ],
+            "bound": 28782
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 47) ≤ 1,026; R(2, 3, 47) ≤ 1,026; R(3, 3, 46) ≤ 28,782, gives 1,026 + 1,026 + 28,782 − 1 = 30,833. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-48",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        48
+      ],
+      "lower": 1537,
+      "upper": 32978,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              47
+            ],
+            "bound": 385,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 48) ≥ 4R(3, 47) − 3 ≥ 4 × 385 − 3 = 1,537. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              48
+            ],
+            "bound": 1073
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              48
+            ],
+            "bound": 1073
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              47
+            ],
+            "bound": 30833
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 48) ≤ 1,073; R(2, 3, 48) ≤ 1,073; R(3, 3, 47) ≤ 30,833, gives 1,073 + 1,073 + 30,833 − 1 = 32,978. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-49",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        49
+      ],
+      "lower": 1561,
+      "upper": 35221,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              48
+            ],
+            "bound": 391,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 49) ≥ 4R(3, 48) − 3 ≥ 4 × 391 − 3 = 1,561. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              49
+            ],
+            "bound": 1122
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              49
+            ],
+            "bound": 1122
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              48
+            ],
+            "bound": 32978
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 49) ≤ 1,122; R(2, 3, 49) ≤ 1,122; R(3, 3, 48) ≤ 32,978, gives 1,122 + 1,122 + 32,978 − 1 = 35,221. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-3-50",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        50
+      ],
+      "lower": 1641,
+      "upper": 37562,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "§6.2(g)",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Derived using preprint with graph certificate; checker claimed by authors, not independently run here",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Coniglio-et-al-2026",
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "lowerDerivation": {
+        "rule": "four-times-two-colour",
+        "inputs": [
+          {
+            "tuple": [
+              3,
+              49
+            ],
+            "bound": 411,
+            "source": "Coniglio-et-al-2026"
+          }
+        ],
+        "explanation": "The construction in §6.2(g) gives R(3, 3, 50) ≥ 4R(3, 49) − 3 ≥ 4 × 411 − 3 = 1,641. See the input source below; witness graphs have not been independently verified by this site."
+      },
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              3,
+              50
+            ],
+            "bound": 1171
+          },
+          {
+            "tuple": [
+              2,
+              3,
+              50
+            ],
+            "bound": 1171
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              49
+            ],
+            "bound": 35221
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 3, 50) ≤ 1,171; R(2, 3, 50) ≤ 1,171; R(3, 3, 49) ≤ 35,221, gives 1,171 + 1,171 + 35,221 − 1 = 37,562. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
       "id": "r-3-4-4",
       "colours": 3,
       "tuple": [
@@ -1073,6 +4016,654 @@
       "checkedDate": "2026-09-26"
     },
     {
+      "id": "r-3-4-6",
+      "colours": 3,
+      "tuple": [
+        3,
+        4,
+        6
+      ],
+      "lower": 117,
+      "upper": 287,
+      "lowerSource": "Ex17",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Personal communication reported in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              4,
+              6
+            ],
+            "bound": 40
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              6
+            ],
+            "bound": 91
+          },
+          {
+            "tuple": [
+              3,
+              4,
+              5
+            ],
+            "bound": 157
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 4, 6) ≤ 40; R(3, 3, 6) ≤ 91; R(3, 4, 5) ≤ 157, gives 40 + 91 + 157 − 1 = 287. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-4-7",
+      "colours": 3,
+      "tuple": [
+        3,
+        4,
+        7
+      ],
+      "lower": 152,
+      "upper": 479,
+      "lowerSource": "ExT",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Published construction, listed in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              4,
+              7
+            ],
+            "bound": 58
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              7
+            ],
+            "bound": 136
+          },
+          {
+            "tuple": [
+              3,
+              4,
+              6
+            ],
+            "bound": 287
+          }
+        ],
+        "parity": true,
+        "explanation": "The recurrence in §6.1(a), using R(2, 4, 7) ≤ 58; R(3, 3, 7) ≤ 136; R(3, 4, 6) ≤ 287, gives 58 + 136 + 287 − 1 − 1 (parity) = 479. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-4-8",
+      "colours": 3,
+      "tuple": [
+        3,
+        4,
+        8
+      ],
+      "lower": 193,
+      "upper": 748,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Published construction inequality, tabulated in the survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "The listed bound follows from 6.2(g): 4R(4,7)−3 ≥ 193.",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              4,
+              8
+            ],
+            "bound": 79
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              8
+            ],
+            "bound": 191
+          },
+          {
+            "tuple": [
+              3,
+              4,
+              7
+            ],
+            "bound": 479
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 4, 8) ≤ 79; R(3, 3, 8) ≤ 191; R(3, 4, 7) ≤ 479, gives 79 + 191 + 479 − 1 = 748. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-4-9",
+      "colours": 3,
+      "tuple": [
+        3,
+        4,
+        9
+      ],
+      "lower": 242,
+      "upper": 1113,
+      "lowerSource": "ExT",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Published construction, listed in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              4,
+              9
+            ],
+            "bound": 105
+          },
+          {
+            "tuple": [
+              3,
+              3,
+              9
+            ],
+            "bound": 261
+          },
+          {
+            "tuple": [
+              3,
+              4,
+              8
+            ],
+            "bound": 748
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 4, 9) ≤ 105; R(3, 3, 9) ≤ 261; R(3, 4, 8) ≤ 748, gives 105 + 261 + 748 − 1 = 1,113. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-5-5",
+      "colours": 3,
+      "tuple": [
+        3,
+        5,
+        5
+      ],
+      "lower": 139,
+      "upper": 359,
+      "lowerSource": "Ex17",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Personal communication reported in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              5,
+              5
+            ],
+            "bound": 46
+          },
+          {
+            "tuple": [
+              3,
+              4,
+              5
+            ],
+            "bound": 157
+          },
+          {
+            "tuple": [
+              3,
+              4,
+              5
+            ],
+            "bound": 157
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 5, 5) ≤ 46; R(3, 4, 5) ≤ 157; R(3, 4, 5) ≤ 157, gives 46 + 157 + 157 − 1 = 359. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-5-6",
+      "colours": 3,
+      "tuple": [
+        3,
+        5,
+        6
+      ],
+      "lower": 181,
+      "upper": 730,
+      "lowerSource": "Ex17",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Personal communication reported in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              5,
+              6
+            ],
+            "bound": 85
+          },
+          {
+            "tuple": [
+              3,
+              4,
+              6
+            ],
+            "bound": 287
+          },
+          {
+            "tuple": [
+              3,
+              5,
+              5
+            ],
+            "bound": 359
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 5, 6) ≤ 85; R(3, 4, 6) ≤ 287; R(3, 5, 5) ≤ 359, gives 85 + 287 + 359 − 1 = 730. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-5-7",
+      "colours": 3,
+      "tuple": [
+        3,
+        5,
+        7
+      ],
+      "lower": 241,
+      "upper": 1341,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIb, p.56",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Published construction inequality, tabulated in the survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "The listed bound follows from the third inequality in 6.2(g): R(7,5,3) ≥ 4R(6,3,3)−3 ≥ 241.",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              5,
+              7
+            ],
+            "bound": 133
+          },
+          {
+            "tuple": [
+              3,
+              4,
+              7
+            ],
+            "bound": 479
+          },
+          {
+            "tuple": [
+              3,
+              5,
+              6
+            ],
+            "bound": 730
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 5, 7) ≤ 133; R(3, 4, 7) ≤ 479; R(3, 5, 6) ≤ 730, gives 133 + 479 + 730 − 1 = 1,341. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-6-6",
+      "colours": 3,
+      "tuple": [
+        3,
+        6,
+        6
+      ],
+      "lower": 338,
+      "upper": 1619,
+      "lowerSource": "Row5",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1(f), p.57",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Preprint construction, incorporated in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint).",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              6,
+              6
+            ],
+            "bound": 160
+          },
+          {
+            "tuple": [
+              3,
+              5,
+              6
+            ],
+            "bound": 730
+          },
+          {
+            "tuple": [
+              3,
+              5,
+              6
+            ],
+            "bound": 730
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 6, 6) ≤ 160; R(3, 5, 6) ≤ 730; R(3, 5, 6) ≤ 730, gives 160 + 730 + 730 − 1 = 1,619. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-7-7",
+      "colours": 3,
+      "tuple": [
+        3,
+        7,
+        7
+      ],
+      "lower": 674,
+      "upper": 6949,
+      "lowerSource": "Row5",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1(f), p.57",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Preprint construction, incorporated in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint).",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              7,
+              7
+            ],
+            "bound": 492
+          },
+          {
+            "tuple": [
+              3,
+              6,
+              7
+            ],
+            "bound": 3229
+          },
+          {
+            "tuple": [
+              3,
+              6,
+              7
+            ],
+            "bound": 3229
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 7, 7) ≤ 492; R(3, 6, 7) ≤ 3,229; R(3, 6, 7) ≤ 3,229, gives 492 + 3,229 + 3,229 − 1 = 6,949. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-8-8",
+      "colours": 3,
+      "tuple": [
+        3,
+        8,
+        8
+      ],
+      "lower": 941,
+      "upper": 28939,
+      "lowerSource": "Row5",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1(f), p.57",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Preprint construction, incorporated in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint).",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              8,
+              8
+            ],
+            "bound": 1518
+          },
+          {
+            "tuple": [
+              3,
+              7,
+              8
+            ],
+            "bound": 13711
+          },
+          {
+            "tuple": [
+              3,
+              7,
+              8
+            ],
+            "bound": 13711
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 8, 8) ≤ 1,518; R(3, 7, 8) ≤ 13,711; R(3, 7, 8) ≤ 13,711, gives 1,518 + 13,711 + 13,711 − 1 = 28,939. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-9-9",
+      "colours": 3,
+      "tuple": [
+        3,
+        9,
+        9
+      ],
+      "lower": 1844,
+      "upper": 118825,
+      "lowerSource": "Row5",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1(f), p.57",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Preprint construction, incorporated in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint).",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              9,
+              9
+            ],
+            "bound": 4956
+          },
+          {
+            "tuple": [
+              3,
+              8,
+              9
+            ],
+            "bound": 56935
+          },
+          {
+            "tuple": [
+              3,
+              8,
+              9
+            ],
+            "bound": 56935
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 9, 9) ≤ 4,956; R(3, 8, 9) ≤ 56,935; R(3, 8, 9) ≤ 56,935, gives 4,956 + 56,935 + 56,935 − 1 = 118,825. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-3-10-10",
+      "colours": 3,
+      "tuple": [
+        3,
+        10,
+        10
+      ],
+      "lower": 2841,
+      "upper": 482323,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1(f), p.57",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Preprint construction, incorporated in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint).",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              2,
+              10,
+              10
+            ],
+            "bound": 16064
+          },
+          {
+            "tuple": [
+              3,
+              9,
+              10
+            ],
+            "bound": 233130
+          },
+          {
+            "tuple": [
+              3,
+              9,
+              10
+            ],
+            "bound": 233130
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(2, 10, 10) ≤ 16,064; R(3, 9, 10) ≤ 233,130; R(3, 9, 10) ≤ 233,130, gives 16,064 + 233,130 + 233,130 − 1 = 482,323. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
       "id": "r-4-4-4",
       "colours": 3,
       "tuple": [
@@ -1093,6 +4684,384 @@
       ],
       "note": "Upper bound improved from 230 to 229 in March 2026 preprint, Theorem 2.2.",
       "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-5-5-5",
+      "colours": 3,
+      "tuple": [
+        5,
+        5,
+        5
+      ],
+      "lower": 454,
+      "upper": 4322,
+      "lowerSource": "Ex23",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIa, p.55",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Personal communication reported in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              4,
+              5,
+              5
+            ],
+            "bound": 1441
+          },
+          {
+            "tuple": [
+              4,
+              5,
+              5
+            ],
+            "bound": 1441
+          },
+          {
+            "tuple": [
+              4,
+              5,
+              5
+            ],
+            "bound": 1441
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(4, 5, 5) ≤ 1,441; R(4, 5, 5) ≤ 1,441; R(4, 5, 5) ≤ 1,441, gives 1,441 + 1,441 + 1,441 − 1 = 4,322. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-6-6-6",
+      "colours": 3,
+      "tuple": [
+        6,
+        6,
+        6
+      ],
+      "lower": 1106,
+      "upper": 89906,
+      "lowerSource": "Row3",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIa, p.55",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Published construction, listed in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              5,
+              6,
+              6
+            ],
+            "bound": 29969
+          },
+          {
+            "tuple": [
+              5,
+              6,
+              6
+            ],
+            "bound": 29969
+          },
+          {
+            "tuple": [
+              5,
+              6,
+              6
+            ],
+            "bound": 29969
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(5, 6, 6) ≤ 29,969; R(5, 6, 6) ≤ 29,969; R(5, 6, 6) ≤ 29,969, gives 29,969 + 29,969 + 29,969 − 1 = 89,906. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-7-7-7",
+      "colours": 3,
+      "tuple": [
+        7,
+        7,
+        7
+      ],
+      "lower": 3214,
+      "upper": 1971515,
+      "lowerSource": "XuR1",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIa, p.55",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Published construction, listed in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              6,
+              7,
+              7
+            ],
+            "bound": 657172
+          },
+          {
+            "tuple": [
+              6,
+              7,
+              7
+            ],
+            "bound": 657172
+          },
+          {
+            "tuple": [
+              6,
+              7,
+              7
+            ],
+            "bound": 657172
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(6, 7, 7) ≤ 657,172; R(6, 7, 7) ≤ 657,172; R(6, 7, 7) ≤ 657,172, gives 657,172 + 657,172 + 657,172 − 1 = 1,971,515. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-8-8-8",
+      "colours": 3,
+      "tuple": [
+        8,
+        8,
+        8
+      ],
+      "lower": 7174,
+      "upper": 44781458,
+      "lowerSource": "Row5",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIa, p.55",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Preprint construction, incorporated in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              7,
+              8,
+              8
+            ],
+            "bound": 14927153
+          },
+          {
+            "tuple": [
+              7,
+              8,
+              8
+            ],
+            "bound": 14927153
+          },
+          {
+            "tuple": [
+              7,
+              8,
+              8
+            ],
+            "bound": 14927153
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(7, 8, 8) ≤ 14,927,153; R(7, 8, 8) ≤ 14,927,153; R(7, 8, 8) ≤ 14,927,153, gives 14,927,153 + 14,927,153 + 14,927,153 − 1 = 44,781,458. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-8-8-9",
+      "colours": 3,
+      "tuple": [
+        8,
+        8,
+        9
+      ],
+      "lower": 10769,
+      "upper": 121692473,
+      "lowerSource": "Row5",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1(f), p.57",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Preprint construction, incorporated in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "Lower bound is listed in the survey with reference Row5 (2022 preprint).",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              7,
+              8,
+              9
+            ],
+            "bound": 38455508
+          },
+          {
+            "tuple": [
+              7,
+              8,
+              9
+            ],
+            "bound": 38455508
+          },
+          {
+            "tuple": [
+              8,
+              8,
+              8
+            ],
+            "bound": 44781458
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(7, 8, 9) ≤ 38,455,508; R(7, 8, 9) ≤ 38,455,508; R(8, 8, 8) ≤ 44,781,458, gives 38,455,508 + 38,455,508 + 44,781,458 − 1 = 121,692,473. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-9-9-9",
+      "colours": 3,
+      "tuple": [
+        9,
+        9,
+        9
+      ],
+      "lower": 15041,
+      "upper": 1043131007,
+      "lowerSource": "Row5",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIa, p.55",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Preprint construction, incorporated in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              8,
+              9,
+              9
+            ],
+            "bound": 347710336
+          },
+          {
+            "tuple": [
+              8,
+              9,
+              9
+            ],
+            "bound": 347710336
+          },
+          {
+            "tuple": [
+              8,
+              9,
+              9
+            ],
+            "bound": 347710336
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(8, 9, 9) ≤ 347,710,336; R(8, 9, 9) ≤ 347,710,336; R(8, 9, 9) ≤ 347,710,336, gives 347,710,336 + 347,710,336 + 347,710,336 − 1 = 1,043,131,007. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
+    },
+    {
+      "id": "r-10-10-10",
+      "colours": 3,
+      "tuple": [
+        10,
+        10,
+        10
+      ],
+      "lower": 23094,
+      "upper": 24760797368,
+      "lowerSource": "Row5",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table XIa, p.55",
+      "upperLocation": "§6.1(a); Tables Ia–Ib and IIa for two-colour inputs",
+      "lowerEvidence": "Preprint construction, incorporated in the published survey",
+      "upperEvidence": "Derived recurrence bound; includes preprint and surveyed computational inputs",
+      "supportingSources": [
+        "Boza9"
+      ],
+      "note": "",
+      "checkedDate": "2026-09-26",
+      "generatedBy": "three-colour-v1",
+      "upperDerivation": {
+        "rule": "upper-recurrence",
+        "inputs": [
+          {
+            "tuple": [
+              9,
+              10,
+              10
+            ],
+            "bound": 8253599123
+          },
+          {
+            "tuple": [
+              9,
+              10,
+              10
+            ],
+            "bound": 8253599123
+          },
+          {
+            "tuple": [
+              9,
+              10,
+              10
+            ],
+            "bound": 8253599123
+          }
+        ],
+        "parity": false,
+        "explanation": "The recurrence in §6.1(a), using R(9, 10, 10) ≤ 8,253,599,123; R(9, 10, 10) ≤ 8,253,599,123; R(9, 10, 10) ≤ 8,253,599,123, gives 8,253,599,123 + 8,253,599,123 + 8,253,599,123 − 1 = 24,760,797,368. Inputs are sourced bounds or recursive consequences; this is not asserted to be the sharpest upper bound."
+      }
     },
     {
       "id": "r-3-3-3-3",
