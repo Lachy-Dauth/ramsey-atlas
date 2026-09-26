@@ -1,0 +1,1331 @@
+{
+  "schemaVersion": 1,
+  "title": "Ramsey Atlas",
+  "checkedDate": "2026-09-26",
+  "surveyDate": "2026-04-24",
+  "scope": "Curated classical clique Ramsey numbers: all 3 <= s <= t <= 10, R(3,t) through t=15, and selected multicolour cases with 3–9 colours.",
+  "intervalConvention": "Inclusive integer endpoints: lower <= R <= upper. A lower-bound witness has lower - 1 vertices.",
+  "methodology": [
+    "The baseline is Small Ramsey Numbers revision 18 (24 April 2026). Literature searches through 26 September 2026 found no later improvement for the included finite cases. This is not an exhaustive or continuously updated database.",
+    "Two-colour upper bounds use Table Ib where it improves Table Ia. Many are unpublished computations reported in the published survey; status is shown per endpoint.",
+    "Preprints and survey-listed personal communications are retained with explicit evidence labels. Bounds are not all backed by separately peer-reviewed proof articles.",
+    "Bounds for arbitrary parameters are not inferred or presented as best known. Hypergraph, directed, size, induced, and non-clique Ramsey variants are outside scope."
+  ],
+  "sources": {
+    "survey-18": {
+      "title": "Small Ramsey Numbers, revision 18",
+      "authors": "Stanisław P. Radziszowski",
+      "date": "2026-04-24",
+      "status": "published dynamic survey",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ejcram18.pdf"
+    },
+    "angeltveit-r310": {
+      "title": "R(3,10) ≤ 41",
+      "authors": "Vigleik Angeltveit",
+      "date": "2025-11-03",
+      "status": "journal article",
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v32i4p30"
+    },
+    "angeltveit-mckay-r55": {
+      "title": "R(5,5) ≤ 46",
+      "authors": "Vigleik Angeltveit and Brendan D. McKay",
+      "date": "2026",
+      "status": "journal article / author preprint",
+      "url": "https://arxiv.org/abs/2409.15709"
+    },
+    "nagda-raghavan-thakurta-2026": {
+      "title": "Reinforced Generation of Combinatorial Structures: Ramsey Numbers",
+      "authors": "Ansh Nagda, Prabhakar Raghavan and Abhradeep Thakurta",
+      "date": "2026-04-21",
+      "status": "preprint, bound incorporated in survey",
+      "url": "https://arxiv.org/abs/2603.09172v5"
+    },
+    "GG": {
+      "title": "Combinatorial Relations and Chromatic Graphs",
+      "authors": "R. E. Greenwood and A. M. Gleason",
+      "date": "1955",
+      "status": "published",
+      "url": "https://doi.org/10.4153/CJM-1955-001-4"
+    },
+    "CodFIM": {
+      "title": "Computing the Ramsey Number R(4,3,3) using Abstraction and Symmetry breaking",
+      "authors": "Michael Codish, Michael Frank, Avraham Itzhakov, Alice Miller",
+      "date": "2016",
+      "status": "published in Constraints 21, 375–393",
+      "url": "https://arxiv.org/abs/1510.08266"
+    },
+    "Boza9": {
+      "title": "New Upper Bounds for the Classical Ramsey Numbers R(4,4,4), R(3,4,5) and R(3,3,6)",
+      "authors": "Luis Boza",
+      "date": "2026-03-12",
+      "status": "preprint, incorporated in survey revision 18",
+      "url": "https://arxiv.org/abs/2603.10851"
+    },
+    "FeKR": {
+      "title": "An Upper Bound of 62 on the Classical Ramsey Number R(3,3,3,3)",
+      "authors": "Susan Fettes, Richard Kramer and Stanisław Radziszowski",
+      "date": "2004",
+      "status": "published, Ars Combinatoria 72, 41–63",
+      "url": "https://repository.rit.edu/article/667/"
+    },
+    "Chu1": {
+      "title": "On the Ramsey Numbers N(3,3,...,3;2)",
+      "authors": "Fan Chung",
+      "date": "1973",
+      "status": "published, Discrete Mathematics 5, 317–321",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=12"
+    },
+    "HiIr": {
+      "title": "On Group Partitions Associated with Lower Bounds for Symmetric Ramsey Numbers",
+      "authors": "R. Hill and R. W. Irving",
+      "date": "1982",
+      "status": "published, European Journal of Combinatorics 3, 35–50",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=26"
+    },
+    "Ex2": {
+      "title": "Constructing Ramsey Graphs with a Computer",
+      "authors": "Geoffrey Exoo",
+      "date": "1987",
+      "status": "published, Congressus Numerantium 59, 31–36",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=17"
+    },
+    "KrLR": {
+      "title": "Lower Bounds for Multicolor Ramsey Numbers from Group Orbits",
+      "authors": "D. L. Kreher, Wei Li and S. Radziszowski",
+      "date": "1988",
+      "status": "published, Journal of Combinatorial Mathematics and Combinatorial Computing 4, 87–95",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=31"
+    },
+    "Ex17": {
+      "title": "Ramsey constructions",
+      "authors": "Geoffrey Exoo",
+      "date": "2010–2011",
+      "status": "personal communication; constructions listed by DS1",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=17"
+    },
+    "ExT": {
+      "title": "New Lower Bounds for 28 Classical Ramsey Numbers",
+      "authors": "Geoffrey Exoo and Miloš Tatarević",
+      "date": "2015",
+      "status": "published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "url": "https://arxiv.org/abs/1504.02403"
+    },
+    "XXER": {
+      "title": "Constructive Lower Bounds on Classical Multicolor Ramsey Numbers",
+      "authors": "Xiaodong Xu, Zheng Xie, Geoffrey Exoo and Stanisław Radziszowski",
+      "date": "2004",
+      "status": "published, Electronic Journal of Combinatorics 11(1), R35",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=58"
+    },
+    "Ex10": {
+      "title": "A Lower Bound for Schur Numbers and Multicolor Ramsey Numbers of K3",
+      "authors": "Geoffrey Exoo",
+      "date": "1994",
+      "status": "published, Electronic Journal of Combinatorics 1, R8",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=17"
+    },
+    "FreSw": {
+      "title": "Symmetric Sum-Free Partitions and Lower Bounds for Schur Numbers",
+      "authors": "Harold Fredricksen and Melvin M. Sweet",
+      "date": "2000-05-18",
+      "status": "published",
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v7i1r32"
+    },
+    "Row2": {
+      "title": "Some Further Results in Ramsey Graph Construction",
+      "authors": "Fred Rowley",
+      "date": "2020",
+      "status": "published, Australasian Journal of Combinatorics 78, 1–10",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=46"
+    },
+    "Row3": {
+      "title": "A Generalised Linear Ramsey Graph Construction",
+      "authors": "Fred Rowley",
+      "date": "2021",
+      "status": "published, Australasian Journal of Combinatorics 81(2), 245–256",
+      "url": "https://www.cs.rit.edu/~spr/ElJC/ref.pdf#page=46"
+    },
+    "Row4": {
+      "title": "An Improved Lower Bound for S(7) and Some Interesting Templates",
+      "authors": "Fred Rowley",
+      "date": "2021",
+      "status": "preprint in survey revision 18",
+      "url": "https://arxiv.org/abs/2107.03560"
+    },
+    "AgCP": {
+      "title": "New lower bounds for Schur and weak Schur numbers",
+      "authors": "R. Ageron, P. Casteras, T. Pellerin, Y. Portella, A. Rimmel and J. Tomasik",
+      "date": "2022",
+      "status": "preprint in survey revision 18",
+      "url": "https://arxiv.org/abs/2112.03175"
+    }
+  },
+  "records": [
+    {
+      "id": "r-3-3",
+      "colours": 2,
+      "tuple": [
+        3,
+        3
+      ],
+      "lower": 6,
+      "upper": 6,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-4",
+      "colours": 2,
+      "tuple": [
+        3,
+        4
+      ],
+      "lower": 9,
+      "upper": 9,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-5",
+      "colours": 2,
+      "tuple": [
+        3,
+        5
+      ],
+      "lower": 14,
+      "upper": 14,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-6",
+      "colours": 2,
+      "tuple": [
+        3,
+        6
+      ],
+      "lower": 18,
+      "upper": 18,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-7",
+      "colours": 2,
+      "tuple": [
+        3,
+        7
+      ],
+      "lower": 23,
+      "upper": 23,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-8",
+      "colours": 2,
+      "tuple": [
+        3,
+        8
+      ],
+      "lower": 28,
+      "upper": 28,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-9",
+      "colours": 2,
+      "tuple": [
+        3,
+        9
+      ],
+      "lower": 36,
+      "upper": 36,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-10",
+      "colours": 2,
+      "tuple": [
+        3,
+        10
+      ],
+      "lower": 40,
+      "upper": 41,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [
+        "angeltveit-r310"
+      ],
+      "note": "The upper bound 41 was published in the Electronic Journal of Combinatorics in 2025.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-11",
+      "colours": 2,
+      "tuple": [
+        3,
+        11
+      ],
+      "lower": 47,
+      "upper": 50,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-12",
+      "colours": 2,
+      "tuple": [
+        3,
+        12
+      ],
+      "lower": 53,
+      "upper": 59,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-13",
+      "colours": 2,
+      "tuple": [
+        3,
+        13
+      ],
+      "lower": 61,
+      "upper": 68,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Preprint construction, incorporated in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [
+        "nagda-raghavan-thakurta-2026"
+      ],
+      "note": "The lower bound was improved to 61 in March 2026.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-14",
+      "colours": 2,
+      "tuple": [
+        3,
+        14
+      ],
+      "lower": 67,
+      "upper": 77,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-15",
+      "colours": 2,
+      "tuple": [
+        3,
+        15
+      ],
+      "lower": 74,
+      "upper": 87,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-4-4",
+      "colours": 2,
+      "tuple": [
+        4,
+        4
+      ],
+      "lower": 18,
+      "upper": 18,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-4-5",
+      "colours": 2,
+      "tuple": [
+        4,
+        5
+      ],
+      "lower": 25,
+      "upper": 25,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-4-6",
+      "colours": 2,
+      "tuple": [
+        4,
+        6
+      ],
+      "lower": 36,
+      "upper": 40,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-4-7",
+      "colours": 2,
+      "tuple": [
+        4,
+        7
+      ],
+      "lower": 49,
+      "upper": 58,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-4-8",
+      "colours": 2,
+      "tuple": [
+        4,
+        8
+      ],
+      "lower": 59,
+      "upper": 79,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-4-9",
+      "colours": 2,
+      "tuple": [
+        4,
+        9
+      ],
+      "lower": 73,
+      "upper": 105,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-4-10",
+      "colours": 2,
+      "tuple": [
+        4,
+        10
+      ],
+      "lower": 92,
+      "upper": 135,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-5-5",
+      "colours": 2,
+      "tuple": [
+        5,
+        5
+      ],
+      "lower": 43,
+      "upper": 46,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ia, p.6",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Published result",
+      "supportingSources": [
+        "angeltveit-mckay-r55"
+      ],
+      "note": "The upper bound 46 was published in the Journal of Graph Theory in 2026.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-5-6",
+      "colours": 2,
+      "tuple": [
+        5,
+        6
+      ],
+      "lower": 59,
+      "upper": 85,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-5-7",
+      "colours": 2,
+      "tuple": [
+        5,
+        7
+      ],
+      "lower": 80,
+      "upper": 133,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-5-8",
+      "colours": 2,
+      "tuple": [
+        5,
+        8
+      ],
+      "lower": 101,
+      "upper": 193,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-5-9",
+      "colours": 2,
+      "tuple": [
+        5,
+        9
+      ],
+      "lower": 133,
+      "upper": 282,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-5-10",
+      "colours": 2,
+      "tuple": [
+        5,
+        10
+      ],
+      "lower": 149,
+      "upper": 381,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-6-6",
+      "colours": 2,
+      "tuple": [
+        6,
+        6
+      ],
+      "lower": 102,
+      "upper": 160,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-6-7",
+      "colours": 2,
+      "tuple": [
+        6,
+        7
+      ],
+      "lower": 115,
+      "upper": 270,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-6-8",
+      "colours": 2,
+      "tuple": [
+        6,
+        8
+      ],
+      "lower": 134,
+      "upper": 423,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-6-9",
+      "colours": 2,
+      "tuple": [
+        6,
+        9
+      ],
+      "lower": 183,
+      "upper": 651,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-6-10",
+      "colours": 2,
+      "tuple": [
+        6,
+        10
+      ],
+      "lower": 204,
+      "upper": 944,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-7-7",
+      "colours": 2,
+      "tuple": [
+        7,
+        7
+      ],
+      "lower": 205,
+      "upper": 492,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-7-8",
+      "colours": 2,
+      "tuple": [
+        7,
+        8
+      ],
+      "lower": 219,
+      "upper": 832,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-7-9",
+      "colours": 2,
+      "tuple": [
+        7,
+        9
+      ],
+      "lower": 252,
+      "upper": 1368,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-7-10",
+      "colours": 2,
+      "tuple": [
+        7,
+        10
+      ],
+      "lower": 292,
+      "upper": 2119,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-8-8",
+      "colours": 2,
+      "tuple": [
+        8,
+        8
+      ],
+      "lower": 282,
+      "upper": 1518,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-8-9",
+      "colours": 2,
+      "tuple": [
+        8,
+        9
+      ],
+      "lower": 329,
+      "upper": 2662,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-8-10",
+      "colours": 2,
+      "tuple": [
+        8,
+        10
+      ],
+      "lower": 343,
+      "upper": 4402,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-9-9",
+      "colours": 2,
+      "tuple": [
+        9,
+        9
+      ],
+      "lower": 565,
+      "upper": 4956,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-9-10",
+      "colours": 2,
+      "tuple": [
+        9,
+        10
+      ],
+      "lower": 581,
+      "upper": 8675,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-10-10",
+      "colours": 2,
+      "tuple": [
+        10,
+        10
+      ],
+      "lower": 798,
+      "upper": 16064,
+      "lowerSource": "survey-18",
+      "upperSource": "survey-18",
+      "lowerLocation": "Table Ia, p.6",
+      "upperLocation": "Table Ib, p.7",
+      "lowerEvidence": "Listed in the published survey",
+      "upperEvidence": "Unpublished computation reported in published survey",
+      "supportingSources": [],
+      "note": "",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-3",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        3
+      ],
+      "lower": 17,
+      "upper": 17,
+      "lowerSource": "GG",
+      "upperSource": "GG",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published",
+      "upperEvidence": "Published",
+      "supportingSources": [
+        "survey-18"
+      ],
+      "note": "Greenwood–Gleason (1955).",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-4",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        4
+      ],
+      "lower": 30,
+      "upper": 30,
+      "lowerSource": "survey-18",
+      "upperSource": "CodFIM",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published dynamic survey",
+      "upperEvidence": "Published in Constraints 21, 375–393",
+      "supportingSources": [],
+      "note": "Kalbfleisch lower bound; Codish et al. computational upper bound published 2016.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-5",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        5
+      ],
+      "lower": 45,
+      "upper": 57,
+      "lowerSource": "Ex2",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published, Congressus Numerantium 59, 31–36",
+      "upperEvidence": "Published dynamic survey",
+      "supportingSources": [],
+      "note": "Upper bound follows from the survey, §6.1(a).",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-6",
+      "colours": 3,
+      "tuple": [
+        3,
+        3,
+        6
+      ],
+      "lower": 61,
+      "upper": 91,
+      "lowerSource": "ExT",
+      "upperSource": "Boza9",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published, Electronic Journal of Combinatorics 22(3), P3.11",
+      "upperEvidence": "Preprint, incorporated in survey revision 18",
+      "supportingSources": [
+        "survey-18"
+      ],
+      "note": "Upper bound improved in March 2026 preprint, Theorem 2.4; included in survey revision 18.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-4-4",
+      "colours": 3,
+      "tuple": [
+        3,
+        4,
+        4
+      ],
+      "lower": 55,
+      "upper": 77,
+      "lowerSource": "KrLR",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published, Journal of Combinatorial Mathematics and Combinatorial Computing 4, 87–95",
+      "upperEvidence": "Published dynamic survey",
+      "supportingSources": [],
+      "note": "Upper bound follows from the survey, §6.1(a).",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-4-5",
+      "colours": 3,
+      "tuple": [
+        3,
+        4,
+        5
+      ],
+      "lower": 89,
+      "upper": 157,
+      "lowerSource": "Ex17",
+      "upperSource": "Boza9",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Personal communication; constructions listed by DS1",
+      "upperEvidence": "Preprint, incorporated in survey revision 18",
+      "supportingSources": [
+        "survey-18"
+      ],
+      "note": "Lower bound is survey-listed personal communication. Upper bound improved in March 2026 preprint, Theorem 2.3.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-4-4-4",
+      "colours": 3,
+      "tuple": [
+        4,
+        4,
+        4
+      ],
+      "lower": 128,
+      "upper": 229,
+      "lowerSource": "HiIr",
+      "upperSource": "Boza9",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published, European Journal of Combinatorics 3, 35–50",
+      "upperEvidence": "Preprint, incorporated in survey revision 18",
+      "supportingSources": [
+        "survey-18"
+      ],
+      "note": "Upper bound improved from 230 to 229 in March 2026 preprint, Theorem 2.2.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-3-3",
+      "colours": 4,
+      "tuple": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "lower": 51,
+      "upper": 62,
+      "lowerSource": "Chu1",
+      "upperSource": "FeKR",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published, Discrete Mathematics 5, 317–321",
+      "upperEvidence": "Published, Ars Combinatoria 72, 41–63",
+      "supportingSources": [
+        "survey-18"
+      ],
+      "note": "Lower 1973; upper 2004. Still open in survey revision 18.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-3-4",
+      "colours": 4,
+      "tuple": [
+        3,
+        3,
+        3,
+        4
+      ],
+      "lower": 97,
+      "upper": 149,
+      "lowerSource": "Ex17",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Personal communication; constructions listed by DS1",
+      "upperEvidence": "Published dynamic survey",
+      "supportingSources": [],
+      "note": "Lower is survey-listed personal communication; upper follows from the survey, §6.1(a).",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-4-4",
+      "colours": 4,
+      "tuple": [
+        3,
+        3,
+        4,
+        4
+      ],
+      "lower": 174,
+      "upper": 450,
+      "lowerSource": "Row2",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published, Australasian Journal of Combinatorics 78, 1–10",
+      "upperEvidence": "Published dynamic survey",
+      "supportingSources": [],
+      "note": "Upper follows from the survey, §6.1(a).",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-4-4-4",
+      "colours": 4,
+      "tuple": [
+        3,
+        4,
+        4,
+        4
+      ],
+      "lower": 381,
+      "upper": 1576,
+      "lowerSource": "survey-18",
+      "upperSource": "Boza9",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published dynamic survey",
+      "upperEvidence": "Preprint, incorporated in survey revision 18",
+      "supportingSources": [],
+      "note": "The lower bound follows from §6.2(j) of the survey. The upper bound is a consequence of Boza (2026) and depends on that preprint.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-4-4-4-4",
+      "colours": 4,
+      "tuple": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "lower": 634,
+      "upper": 6301,
+      "lowerSource": "XXER",
+      "upperSource": "Boza9",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published, Electronic Journal of Combinatorics 11(1), R35",
+      "upperEvidence": "Preprint, incorporated in survey revision 18",
+      "supportingSources": [
+        "survey-18"
+      ],
+      "note": "The survey (p. 56) records the upper bound 6,301 as a consequence of Boza (2026), improving 6,306.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-3-3-3",
+      "colours": 5,
+      "tuple": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "lower": 162,
+      "upper": 307,
+      "lowerSource": "Ex10",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published, Electronic Journal of Combinatorics 1, R8",
+      "upperEvidence": "Published dynamic survey",
+      "supportingSources": [],
+      "note": "Upper follows from the survey, §6.1(a).",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-3-3-3-3",
+      "colours": 6,
+      "tuple": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "lower": 538,
+      "upper": 1838,
+      "lowerSource": "FreSw",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published",
+      "upperEvidence": "Published dynamic survey",
+      "supportingSources": [],
+      "note": "Upper follows from the survey, §6.1(a).",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-3-3-3-3-3",
+      "colours": 7,
+      "tuple": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "lower": 1698,
+      "upper": 12861,
+      "lowerSource": "Row4",
+      "upperSource": "survey-18",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Preprint in survey revision 18",
+      "upperEvidence": "Published dynamic survey",
+      "supportingSources": [],
+      "note": "Lower source is a preprint in the April 2026 survey.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-3-3-3-3-3-3",
+      "colours": 8,
+      "tuple": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "lower": 5288,
+      "upper": 102882,
+      "lowerSource": "Row3",
+      "upperSource": "Boza9",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Published, Australasian Journal of Combinatorics 81(2), 245–256",
+      "upperEvidence": "Established recurrence, explicitly evaluated in a 2026 preprint",
+      "supportingSources": [
+        "survey-18"
+      ],
+      "note": "Upper is explicitly calculated by the standard recurrence in Boza 2026 Theorem 2.5 proof; not dependent on Boza's new improvements.",
+      "checkedDate": "2026-09-26"
+    },
+    {
+      "id": "r-3-3-3-3-3-3-3-3-3",
+      "colours": 9,
+      "tuple": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "lower": 17805,
+      "upper": 925931,
+      "lowerSource": "AgCP",
+      "upperSource": "Boza9",
+      "lowerLocation": "Section 6.1, pp. 55–57",
+      "upperLocation": "Section 6.1, pp. 55–57",
+      "lowerEvidence": "Preprint in survey revision 18",
+      "upperEvidence": "Established recurrence, explicitly evaluated in a 2026 preprint",
+      "supportingSources": [
+        "survey-18"
+      ],
+      "note": "Lower source is a preprint in the survey. Upper is explicitly calculated by the standard recurrence in Boza 2026 Theorem 2.5 proof.",
+      "checkedDate": "2026-09-26"
+    }
+  ]
+}
